@@ -1,0 +1,2 @@
+### GET HELLO REQUEST 
+GET http://localhost:3000/world
