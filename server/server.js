@@ -1,9 +1,8 @@
 const fastify = require('fastify')({ logger: true });
-const swagger = require('fastify-swagger');
 const PORT = 3000;
 
 fastify.get('/world', async (request, reply) => {
-  return { hello: 'world' };
+  return { out: 'world' };
 });
 
 const start = async () => {
