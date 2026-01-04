@@ -1,24 +1,45 @@
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Inter", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin: auto;
-  padding: 1rem 4rem;
-  background-color: #111111;
+header {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;              /* Горизонтальный ряд */
+  align-items: center;        /* Вертикальное выравнивание */
+  justify-content: flex-start;
+
+  width: 100%;
 }
 
-.text1, h1, h2, p {
-    color: #D1D1D1;
+.logo {
+  margin: 3rem 1.5rem 3rem 0rem;
+  font-size: 26.5px;
+  font-family: 'Montserrat ExtraBold', sans-serif;
 }
 
-.text2 {
-    color: #C4C4C4;
+.logo:hover {
+  color: #CC0000;
+
+}
+
+.shop, .networks, .about, .leaders {
+  text-decoration: none;
+  padding: 0rem 1rem;
+  font-size: 18px;
+}
+
+.ip {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: 8rem;
+  cursor: pointer;
+}
+
+.menu-right {
+  list-style: none;
 }

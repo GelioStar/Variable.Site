@@ -1,0 +1,29 @@
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Inter", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: auto;
+    padding: 1rem 4rem;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column; /* элементы идут сверху вниз */
+    margin: 0;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.T1, h1, h2, p {
+    font-family: 'Montserrat Medium', sans-serif;
+    color: #D1D1D1;
+}
+
+.T2 {
+    font-family: 'Inter 18px', sans-serif;
+    color: #C4C4C4;
+}
