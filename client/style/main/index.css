@@ -9,8 +9,8 @@ header {
   margin: 0;
   padding: 0;
 
-  display: flex;              /* Горизонтальный ряд */
-  align-items: center;        /* Вертикальное выравнивание */
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
 
   width: 100%;
@@ -22,15 +22,15 @@ header {
   font-family: 'Montserrat ExtraBold', sans-serif;
 }
 
-.logo:hover {
-  color: #CC0000;
-
+.shop, .social, .about, .leaders {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
 }
 
-.shop, .networks, .about, .leaders {
-  text-decoration: none;
-  padding: 0rem 1rem;
-  font-size: 18px;
+.shop:hover, .social:hover, .about:hover, .leaders:hover {
+  background-color: #262626;
+  border-radius: 10px;
 }
 
 .ip {
