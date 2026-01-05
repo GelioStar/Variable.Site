@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-html {
+/* html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-user-select: none;
@@ -16,7 +16,7 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+} */
 
 .T1, h1, h2, p {
     font-family: 'Montserrat Medium', sans-serif;
