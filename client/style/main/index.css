@@ -1,3 +1,18 @@
+.main {
+  display: grid;
+  grid-template-rows:
+    80px
+    250px
+    100px;
+  min-height: 60px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* вертикальное центрирование */
+}
+
 header {
     width: 100%;
     position: fixed;
@@ -38,6 +53,7 @@ header {
   margin-left: auto;
   margin-right: 8rem;
   cursor: pointer;
+  bottom: 0.14rem;
 }
 
 .shop:hover, .social:hover, .about:hover, .leaders:hover {
@@ -49,17 +65,17 @@ header {
   color: var(--color-cyan-500);
 }
 
-.main {
-  display: grid;
-  grid-template-rows:
-    80px
-    250px
-    100px;
-  min-height: 60px;
+@media (max-width: 915px) {
+  .ip {
+    margin-right: 2rem;
+  }
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* горизонтальное центрирование */
+@media (max-width: 818px) {
+  .shop, .social, .about, .leaders {
+    display: none;
+  }
+  .ip {
+    
+  }
 }

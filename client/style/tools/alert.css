@@ -1,20 +1,32 @@
-#toast {
-    visibility: hidden;
-    min-width: 200px;
-    background: var(--color-gray-500);
-    color: var(--color-gray-700);
-    text-align: center;
-    border-radius: 4px;
-    padding: 10px;
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    transition: 0.4s ease;
-    z-index: 9999;
+.custom-alert {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px); /* начальное смещение вниз */
+  opacity: 0;
+  pointer-events: none; /* пока скрыт — не кликабелен */
+  padding: 1rem 1.5rem;
+  background-color: var(--color-gray-800);
+  color: var(--color-white);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 9999;
+  transition: opacity 300ms ease, transform 300ms ease;
 }
-#toast.show {
-    visibility: visible;
-    opacity: 1;
+
+.custom-alert.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.custom-alert button {
+  background: transparent;
+  border: 1px solid var(--color-gray-800);
+  color: var(--color-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
 }

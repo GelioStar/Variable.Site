@@ -71,7 +71,7 @@
         // Clipboard API — современный способ
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(text)
-            .then(() => alert('Скопировано: ' + text))
+            .then(() => alert('Скопировано'))
             .catch(err => console.error('Ошибка копирования:', err));
         } else {
           // Фоллбэк для старых браузеров
@@ -81,7 +81,7 @@
           textarea.select();
           document.execCommand('copy');
           textarea.remove();
-          alert('Скопировано: ' + text);
+          alert('Скопировано');
         }
       });
     });

@@ -5,7 +5,7 @@ document.querySelectorAll('.clickable').forEach(elem => {
     // Clipboard API — современный способ
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text)
-        .then(() => alert('Скопировано: ' + text, 10))
+        .then(() => alert('Скопировано', 10))
         .catch(err => console.error('Ошибка копирования:', err));
     } else {
         // Фоллбэк для старых браузеров
@@ -15,7 +15,7 @@ document.querySelectorAll('.clickable').forEach(elem => {
         textarea.select();
         document.execCommand('copy');
         textarea.remove();
-        alert('Скопировано: ' + text, 10);
+        alert('Скопировано', 10);
     }
     });
 });

@@ -1,23 +1,45 @@
-window.alert = function(message, timeout=null){
-  const alert = document.createElement('div');
-  const alertButton = document.createElement('button')
-  alertButton.innerText = 'OK';
-  alert.classList.add('alert','T1');
-  alert.setAttribute('style',
-    `position: fixed;
-    top: 100px;
-    left: 50%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 5px 0 #00000022;
-    display: flex;
-    flex-direction: column;
-  `);
-  alert.innerHTML = `<span>${message}</span>`;
-  alert.appendChild(alertButton);
-  alertButton.addEventListener('click', (e)=>{
-    alert.remove();
-  });
-  if(timeout != null){ setTimeout(()=>{ alert. remove(); }, Number(timeout))}
-  document.body.appendChild(alert);
-}
+// Переопределяем window.alert (опционально)
+window.alert = function(message, timeout = 3000) {
+  const alertEl = document.createElement('div');
+  // const alertBtn = document.createElement('button');
+
+  // alertBtn.innerText = 'OK';
+  alertEl.className = 'custom-alert';
+  alertEl.innerHTML = `<span class="custom-alert__text">${message}</span>`;
+  // alertEl.appendChild(alertBtn);
+  document.body.appendChild(alertEl);
+
+  // Показываем с анимацией (обеспечиваем начальный рендер -> затем добавляем класс)
+  requestAnimationFrame(() => alertEl.classList.add('visible'));
+
+  // Функция плавного скрытия и удаления
+  let timeoutId = null;
+  function hideAndRemove() {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      timeoutId = null;
+    }
+    // убираем класс visible -> начинается transition
+    alertEl.classList.remove('visible');
+
+    // удаляем после окончания transition
+    function onEnd(e) {
+      if (e.target === alertEl) {
+        alertEl.removeEventListener('transitionend', onEnd);
+        alertEl.remove();
+      }
+    }
+    alertEl.addEventListener('transitionend', onEnd);
+
+    // страховка на случай, если transitionend не сработает
+    setTimeout(() => { if (alertEl.parentNode) alertEl.remove(); }, 500);
+  }
+
+  // Кнопка закрытия
+  // alertBtn.addEventListener('click', hideAndRemove);
+
+  // Таймаут 자동ический (если указан)
+  if (timeout != null) {
+    timeoutId = setTimeout(hideAndRemove, Number(timeout));
+  }
+};

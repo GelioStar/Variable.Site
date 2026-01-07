@@ -18,8 +18,12 @@ body {
     user-select: none;
 } */
 
-@media screen and (max-width: 915) {
+@media (max-width: 915px) {
     body {
-        padding: 0 0;
+        padding: 0 1rem;
     }
+}
+
+@media (max-width: 818px) {
+  
 }
