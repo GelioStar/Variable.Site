@@ -4,28 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Variable</title>
-  <link rel="stylesheet" href="style/alert.css">
+  <link rel="stylesheet" href="style/tools/alert.css">
+  <link rel="stylesheet" href="style/tools/colors.css">
+  <link rel="stylesheet" href="style/tools/font.css">
   <link rel="stylesheet" href="style/index.css">
   <link rel="stylesheet" href="style/main/index.css">
   <script src="scripts/alert.js"></script>
-  <script src="scripts/main/index.js"></script>
 </head>
 <body>
-  <header>
-    <ul class="menu">
-      <li><a href="index.html" class="T1 logo">
-        <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 134.82 35.8">
-          <defs>
-            <style>.cls-1{fill:none;}.cls-2{font-size:28px;fill:#c4c4c4;transition: fill 0.1s ease-in-out;font-family:Montserrat-ExtraBold, Montserrat;font-weight:800;}.cls-2:hover{fill: #CC0000; transition: fill 0.1s ease-in-out;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0.03em;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:0em;}.cls-7{letter-spacing:0.01em;}.cls-8{clip-path:url(#clip-path);}.cls-9{clip-path:url(#clip-path-2);}.cls-10{clip-path:url(#clip-path-3);}.cls-11{clip-path:url(#clip-path-4);}</style>
-            <clipPath id="clip-path" transform="translate(5.45 4.75)"><path class="cls-1" d="M0,.65H7.14a2,2,0,0,1,1.76,1L17.74,17l-4.15,7.05"/></clipPath><clipPath id="clip-path-2" transform="translate(5.45 4.75)"><rect class="cls-1" x="-5" y="-4.35" width="27.74" height="33.4"/></clipPath><clipPath id="clip-path-3" transform="translate(5.45 4.75)"><path class="cls-1" d="M27.4.65H15.7a1,1,0,0,0-.9,1.52l5.85,9.92h0Z"/></clipPath><clipPath id="clip-path-4" transform="translate(5.45 4.75)"><rect class="cls-1" x="9.67" y="-4.35" width="22.73" height="21.43"/></clipPath></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><text class="cls-2" transform="translate(31.72 28.55)"><tspan class="cls-3">a</tspan><tspan class="cls-4" x="17.3" y="0">r</tspan><tspan x="30.49" y="0">i</tspan><tspan class="cls-5" x="39.26" y="0">p</tspan><tspan x="58.44" y="0">l</tspan><tspan class="cls-6" x="67.2" y="0">e</tspan><tspan class="cls-7" x="85.04" y="0">x</tspan></text><g id="Лого"><g id="Трапеция"><g class="cls-8"><g class="cls-9"><image width="59" height="71" transform="scale(0.48)" xlink:href="data:image/png;base64,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"/></g></g></g><g id="Треугольник"><g class="cls-10"><g class="cls-11"><image width="48" height="46" transform="translate(14.88) scale(0.48)" xlink:href="data:image/png;base64,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"/></g></g></g></g></g></g></svg>
-      </a></li>
-      <li><a href="#shop" class="T2 shop">Магазин</a></li>
-      <li><a href="#social" class="T2 social">Соцсети</a></li>
-      <li><a href="#about" class="T2 about">О нас</a></li>
-      <li><a href="#leaders" class="T2 leaders">Лидеры</a></li>
-      <span class="T1 ip clickable" id="ip">mc.variable.ru</span>
-    </ul>
-  </header>
+  <main class="main">
+    <section class="row header">
+      <ul class="menu">
+        <li><a href="index.html" class="T1 logo">
+          <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 134.82 35.8">
+            <defs>
+              <style>.cls-1{fill:none;}.cls-2{font-size:28px;fill:#c4c4c4;transition: fill 0.1s ease-in-out;font-family:Montserrat-ExtraBold, Montserrat;font-weight:800;}.cls-2:hover{fill: #CC0000; transition: fill 0.1s ease-in-out;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0.03em;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:0em;}.cls-7{letter-spacing:0.01em;}.cls-8{clip-path:url(#clip-path);}.cls-9{clip-path:url(#clip-path-2);}.cls-10{clip-path:url(#clip-path-3);}.cls-11{clip-path:url(#clip-path-4);}</style>
+              <clipPath id="clip-path" transform="translate(5.45 4.75)"><path class="cls-1" d="M0,.65H7.14a2,2,0,0,1,1.76,1L17.74,17l-4.15,7.05"/></clipPath><clipPath id="clip-path-2" transform="translate(5.45 4.75)"><rect class="cls-1" x="-5" y="-4.35" width="27.74" height="33.4"/></clipPath><clipPath id="clip-path-3" transform="translate(5.45 4.75)"><path class="cls-1" d="M27.4.65H15.7a1,1,0,0,0-.9,1.52l5.85,9.92h0Z"/></clipPath><clipPath id="clip-path-4" transform="translate(5.45 4.75)"><rect class="cls-1" x="9.67" y="-4.35" width="22.73" height="21.43"/></clipPath></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><text class="cls-2" transform="translate(31.72 28.55)"><tspan class="cls-3">a</tspan><tspan class="cls-4" x="17.3" y="0">r</tspan><tspan x="30.49" y="0">i</tspan><tspan class="cls-5" x="39.26" y="0">p</tspan><tspan x="58.44" y="0">l</tspan><tspan class="cls-6" x="67.2" y="0">e</tspan><tspan class="cls-7" x="85.04" y="0">x</tspan></text><g id="Лого"><g id="Трапеция"><g class="cls-8"><g class="cls-9"><image width="59" height="71" transform="scale(0.48)" xlink:href="data:image/png;base64,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"/></g></g></g><g id="Треугольник"><g class="cls-10"><g class="cls-11"><image width="48" height="46" transform="translate(14.88) scale(0.48)" xlink:href="data:image/png;base64,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"/></g></g></g></g></g></g></svg>
+        </a></li>
+        <li><a href="#shop" class="T2 shop">Магазин</a></li>
+        <li><a href="#about" class="T2 about">Описание товаров</a></li>
+        <li><a href="#social" class="T2 social">Соцсети</a></li>
+        <li><a href="#leaders" class="T2 leaders">Лидеры</a></li>
+        <span class="T1 ip clickable" id="ip">mc.variable.ru</span>
+      </ul>
+    </section>
+    <section class="row">
+      <h1>
+        <p class="T1">Проект выбирают 13540 игроков.</p>
+        <p class="T1">А что выбираешь ты?</p>
+      </h1>
+    </section>
+    <section class="row">
+      <h1>
+        <p class="T2">Слабо выбрать наш проект?</p>
+      </h1>
+    </section>
+    <section class="row">
+      <h1>
+        <p class="T1">Проект выбирают 13540 игроков.</p>
+        <p class="T1">А что выбираешь ты?</p>
+      </h1>
+    </section>
+    <section class="row">
+      <h1>
+        <p class="T2">Слабо выбрать наш проект?</p>
+      </h1>
+    </section>
+    <section class="row">
+      <h1>
+        <p class="T1">Проект выбирают 13540 игроков.</p>
+        <p class="T1">А что выбираешь ты?</p>
+      </h1>
+    </section>
+    <section class="row">
+      <h1>
+        <p class="T2">Слабо выбрать наш проект?</p>
+      </h1>
+    </section>
+  </main>
+    
   <script>
     document.querySelectorAll('.clickable').forEach(elem => {
       elem.addEventListener('click', () => {
@@ -49,6 +86,7 @@
       });
     });
   </script>
+  <script src="scripts/main/index.js"></script>
   <!-- <main>
     <h1>Welcome to the Client Page</h1>
     <p>This is a sample client-side HTML file.</p>
