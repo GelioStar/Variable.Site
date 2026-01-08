@@ -5,13 +5,13 @@
   transform: translateX(-50%) translateY(12px); /* начальное смещение вниз */
   opacity: 0;
   pointer-events: none; /* пока скрыт — не кликабелен */
-  padding: 1rem 1.5rem;
+  padding: 0.75vw 1.5vw;
   background-color: var(--color-gray-800);
   color: var(--color-white);
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   z-index: 9999;
   transition: opacity 300ms ease, transform 300ms ease;
 }

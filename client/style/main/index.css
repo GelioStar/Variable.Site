@@ -5,6 +5,7 @@
     250px
     100px;
   min-height: 60px;
+  max-width: 1400px;
 }
 
 .row {
@@ -34,18 +35,24 @@ header {
   width: 100%;
 }
 
+.svg-logo {
+  width: 100px;
+  height: 30px;
+}
+
 .logo {
   position: relative;
   margin: 3rem 1.2rem 2.9rem 0rem;
   font-size: 26.5px;
   font-family: 'Montserrat ExtraBold', sans-serif;
-  top: 0.14rem;
+  top: 0.2rem;
 }
 
 .shop, .social, .about, .leaders {
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 18px;
+  font-weight: 500;
 }
 
 .ip {
@@ -53,7 +60,8 @@ header {
   margin-left: auto;
   margin-right: 8rem;
   cursor: pointer;
-  bottom: 0.14rem;
+  bottom: 0.2rem;
+  max-width: 1400px;
 }
 
 .shop:hover, .social:hover, .about:hover, .leaders:hover {
@@ -62,16 +70,16 @@ header {
 }
 
 .ip:hover {
-  color: var(--color-cyan-500);
+  color: var(--color-white);
 }
 
-@media (max-width: 915px) {
+@media (max-width: 988px) {
   .ip {
     margin-right: 2rem;
   }
 }
 
-@media (max-width: 818px) {
+@media (max-width: 860px) {
   .shop, .social, .about, .leaders {
     display: none;
   }
