@@ -1,6 +1,7 @@
-.T1, h1, h2, p {
+.T1 {
     font-family: 'Montserrat Medium', sans-serif;
     color: var(--color-gray-300);
+    margin: 0 0;
 }
 
 .T2 {
