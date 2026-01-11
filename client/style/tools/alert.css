@@ -5,7 +5,7 @@
   transform: translateX(-50%) translateY(12px); /* начальное смещение вниз */
   opacity: 0;
   pointer-events: none; /* пока скрыт — не кликабелен */
-  padding: 0.75vw 1.5vw;
+  padding: 1.5vh 3vh;
   background-color: var(--color-gray-800);
   color: var(--color-white);
   border-radius: 8px;
