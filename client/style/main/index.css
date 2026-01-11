@@ -2,8 +2,8 @@
   display: grid;
   grid-template-rows:
     80px
-    60vh
-    100px;
+    35vh
+    55vh;
   min-height: 60px;
   max-width: 1400px;
 }
@@ -12,6 +12,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* вертикальное центрирование */
+}
+
+.thumbnail, .tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* вертикальное центрирование */
+  align-items: center;
 }
 
 header {
@@ -58,20 +65,10 @@ header {
 .ip {
   font-size: 20px;
   margin-left: auto;
-  margin-right: 8rem;
+  margin-right: 8%;
   cursor: pointer;
   bottom: 0.2rem;
 }
-
-.shop:hover, .social:hover, .about:hover, .leaders:hover {
-  background-color: var(--color-gray-800);
-  border-radius: 10px;
-}
-
-.ip:hover {
-  color: var(--color-white);
-}
-
 
 /* Кнопки */
 .btns {
@@ -103,10 +100,24 @@ header {
 }
 
 
+.shop:hover, .social:hover, .about:hover, .leaders:hover {
+  background-color: var(--color-gray-800);
+  border-radius: 10px;
+  color: var(--color-gray-300);
+}
+
+.ip:hover, .shopBtn:hover {
+  color: var(--color-white);
+}
+
+.goodsBtn:hover {
+  color: var(--color-gray-300);
+}
+
 
 @media (max-width: 988px) {
   .ip {
-    margin-right: 2rem;
+    margin-right: 4%;
   }
 }
 
@@ -116,5 +127,15 @@ header {
   }
   .ip {
     
+  }
+}
+
+@media (max-width: 435px) {
+  .btns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .goodsBtn {
+    display: none;
   }
 }
