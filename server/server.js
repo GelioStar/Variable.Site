@@ -1,17 +1,24 @@
-const fastify = require('fastify')({ logger: true });
-const PORT = 3000;
 
-fastify.get('/world', async (request, reply) => {
-  return { out: 'world' };
+// MODULES
+const fastify = require('fastify')({ logger: true })
+const path = require('node:path')
+const mysql = require('mysql')
+
+// PORT
+
+// регистрируем плагин @fastify/static
+fastify.register(require('@fastify/static'), {
+  root: path.join(__dirname, 'client'), // папка с HTML/CSS/JS
+  prefix: '/',                          // URL-префикс (от корня)
 });
 
-const start = async () => {
-  try {
-    await fastify.listen({ port: PORT })
-  } catch (err) {
-    fastify.log.error(err);
-    process.exit(1);
-  }
-};
+// по умолчанию Fastify отдаёт index.html в корне
+fastify.get('/', async (request, reply) => {
+  return reply.sendFile('index.html')   // отдаёт файл из public/
+});
 
-start();
+// запускаем сервер
+fastify.listen({ port: 3000 }, (err, address) => {
+  if (err) throw err
+  console.log(`Server running at ${address}`)
+});

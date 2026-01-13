@@ -15,3 +15,8 @@ h1 {
     line-height: 1.2;
     text-align: center;
 }
+
+.TW {
+    color: var(--color-white);
+    margin: 0 0;
+}

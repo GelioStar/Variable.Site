@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@fastify/static": "^9.0.0",
     "fastify": "^5.6.2",
     "fastify-swagger": "^5.1.1",
+    "mysql": "^2.18.1",
     "mysql2": "^3.15.3",
     "uuid": "^13.0.0"
   },

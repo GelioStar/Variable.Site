@@ -9,7 +9,7 @@ body {
     max-width: 1400px;
 }
 
-/* html {
+html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-user-select: none;
@@ -17,7 +17,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-} */
+}
 
 @media (max-width: 988px) {
     body {
@@ -27,4 +27,11 @@ body {
 
 @media (max-width: 860px) {
   
+}
+
+.selectable {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
 }

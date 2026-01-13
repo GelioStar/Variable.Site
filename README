@@ -1,1 +1,7 @@
-Variable.Site
+# Variable.Site
+
+### Зависимости
+npm i
+
+### Запуск сервера
+node ./server/server.js

@@ -112,6 +112,11 @@ header {
   gap: 1rem;
 }
 
+.document-element {
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
 .payment-logo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -128,10 +133,14 @@ header {
   color: var(--color-white);
 }
 
-.goodsBtn:hover {
+.goodsBtn:hover, .document-element:hover {
   color: var(--color-gray-300);
+  cursor: pointer;
 }
 
+.goodsBtn:hover {
+  color: var(--color-gray-300)
+}
 
 @media (max-width: 988px) {
   .ip {
