@@ -35,3 +35,7 @@ html {
     -ms-user-select: auto !important;
     user-select: auto !important;
 }
+
+.clickable:hover {
+    cursor: pointer;
+}

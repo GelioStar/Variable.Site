@@ -1,24 +1,22 @@
-
 // MODULES
-const fastify = require('fastify')({ logger: true })
-const path = require('node:path')
-const mysql = require('mysql')
+const fastify = require('fastify')({ logger: true });
+const path = require('node:path');
 
 // PORT
+const PORT = 3000;
 
-// регистрируем плагин @fastify/static
 fastify.register(require('@fastify/static'), {
-  root: path.join(__dirname, 'client'), // папка с HTML/CSS/JS
-  prefix: '/',                          // URL-префикс (от корня)
+  root: path.join(__dirname, 'client'),
+  prefix: '/',
 });
 
-// по умолчанию Fastify отдаёт index.html в корне
 fastify.get('/', async (request, reply) => {
-  return reply.sendFile('index.html')   // отдаёт файл из public/
+  return reply.sendFile('index.html');
 });
 
-// запускаем сервер
-fastify.listen({ port: 3000 }, (err, address) => {
+fastify.register(require(path.join(__dirname, 'routes', 'shop.js')), { prefix: '/shop' });
+
+fastify.listen({ port: PORT }, (err, address) => {
   if (err) throw err
-  console.log(`Server running at ${address}`)
+  console.log(`Server running at ${address}`);
 });
