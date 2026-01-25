@@ -1,0 +1,167 @@
+.main {
+  display: grid;
+  grid-template-rows:
+    80px
+    35vh
+    55vh
+    50vh;
+  min-height: 60px;
+  max-width: 1400px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* вертикальное центрирование */
+}
+
+.thumbnail, .tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* вертикальное центрирование */
+  align-items: center;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: var(--gray-color-900);
+}
+
+.menu {
+  background-color: var(--gray-color-900);
+  position: fixed;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  width: 100%;
+}
+
+.svg-logo {
+  width: 100px;
+  height: 30px;
+}
+
+.logo {
+  position: relative;
+  margin: 3rem 1.2rem 2.9rem 0rem;
+  font-size: 26.5px;
+  font-family: 'Montserrat ExtraBold', sans-serif;
+  top: 0.2rem;
+}
+
+.shop, .social, .about, .leaders {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ip {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: 8%;
+  cursor: pointer;
+  bottom: 0.2rem;
+}
+
+/* Кнопки */
+.btns {
+  background-color: var(--gray-color-900);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 5vh 0;
+}
+
+.shopBtn {
+  text-decoration: none;
+  background-color: var(--color-gray-800);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+
+.goodsBtn {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.info, .payment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.document-element {
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
+.payment-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* HOVER */
+.shop:hover, .social:hover, .about:hover, .leaders:hover {
+  background-color: var(--color-gray-800);
+  border-radius: 10px;
+  color: var(--color-gray-300);
+}
+
+.ip:hover, .shopBtn:hover {
+  color: var(--color-white);
+}
+
+.goodsBtn:hover, .document-element:hover {
+  color: var(--color-gray-300);
+}
+
+.goodsBtn:hover {
+  color: var(--color-gray-300)
+}
+
+@media (max-width: 988px) {
+  .ip {
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 860px) {
+  .shop, .social, .about, .leaders {
+    display: none;
+  }
+  .ip {
+    
+  }
+}
+
+@media (max-width: 435px) {
+  .btns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .goodsBtn {
+    display: none;
+  }
+}

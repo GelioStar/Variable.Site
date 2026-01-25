@@ -1,0 +1,43 @@
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Inter", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: auto;
+    padding: 0 4%;
+    background-color: var(--color-gray-925);
+    display: flex;
+    flex-direction: column; /* элементы идут сверху вниз */
+    min-height: 100vh;
+    max-width: 1400px;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (max-width: 988px) {
+    body {
+        padding: 0 2%;
+    }
+}
+
+@media (max-width: 860px) {
+  
+}
+
+.selectable {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+}
+
+.seleted {
+    background-color: var(--color-gray-800);
+    border-radius: 10px;
+    color: var(--color-gray-300);
+}

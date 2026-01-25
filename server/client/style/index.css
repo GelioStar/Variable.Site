@@ -39,3 +39,9 @@ html {
 .clickable:hover {
     cursor: pointer;
 }
+
+.selected {
+    background-color: var(--color-gray-800);
+    border-radius: 10px;
+    color: var(--color-gray-300);
+}
