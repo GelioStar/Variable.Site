@@ -11,7 +11,7 @@ fastify.register(require('@fastify/static'), {
 });
 
 fastify.get('/', async (request, reply) => {
-  return reply.sendFile('index.html');
+  return reply.sendFile('pages/main/index.html');
 });
 
 fastify.register(require(path.join(__dirname, 'routes', 'shop.js')), { prefix: '/shop' });

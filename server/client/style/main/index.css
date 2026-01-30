@@ -1,7 +1,7 @@
 .main {
   display: grid;
   grid-template-rows:
-    80px
+    60px
     35vh
     55vh
     50vh;
