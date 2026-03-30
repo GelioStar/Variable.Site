@@ -1,0 +1,32 @@
+.main {
+  display: grid;
+  grid-template-rows:
+    60px
+    35vh
+    55vh
+    50vh;
+  min-height: 60px;
+  max-width: 1400px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.info, .payment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.document-element {
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
+.payment-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

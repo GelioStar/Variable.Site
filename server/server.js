@@ -2,6 +2,11 @@
 const fastify = require('fastify')({ logger: true });
 const path = require('node:path');
 
+// Регистрация @fastify/mysql
+fastify.register(require('@fastify/mysql'), {
+  connectionString: 'mysql://root:password@localhost:3306/db_name'
+});
+
 // PORT
 const PORT = 3000;
 
