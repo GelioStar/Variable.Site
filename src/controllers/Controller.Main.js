@@ -2,6 +2,10 @@
 
 module.exports = {
   async getPage() {
-    return 'pages/main/main.html';
-  }
+    return 'pages/main/Page.Main.html';
+  },
+  async getTitle() {
+    return 'Main';
+  },
+  
 };

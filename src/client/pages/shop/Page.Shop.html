@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Variable: Магазин</title>
-  <link rel="stylesheet" href="/style/tools/alert.css">
-  <link rel="stylesheet" href="/style/tools/colors.css">
-  <link rel="stylesheet" href="/style/tools/font.css">
-  <link rel="stylesheet" href="/style/index.css">
-  <link rel="stylesheet" href="/style/shop/index.css">
-  <script src="/scripts/Script.AlertMessage.js"></script>
+  <link rel="stylesheet" href="style/tools/StyleTool.AlertMessage.css">
+  <link rel="stylesheet" href="style/tools/StyleTool.Colors.css">
+  <link rel="stylesheet" href="style/tools/StyleTool.Font.css">
+  <link rel="stylesheet" href="style/Style.MainStyle.css">
+  <link rel="stylesheet" href="pages/shop/styles/Style.PageShop.Index.css">
 </head>
 <body>
   <main class="main">
@@ -24,7 +23,7 @@
         <li><a href="/shop" class="T2 shop selected">Магазин</a></li>
         <li><a href="#social" class="T2 social">Соцсети</a></li>
         <li><a href="#leaders" class="T2 leaders">Лидеры</a></li>
-        <span class="T1 ip clickable" id="ip">mc.variable.ru</span>
+        <span title="Копировать" class="T1 ip clickable" id="ip">mc.variable.ru</span>
       </ul>
     </section>
     <section class="row thumbnail">
@@ -90,31 +89,8 @@
       </ul>
     </section>
   </main>
-    
-  <script>
-    document.querySelectorAll('.clickable').forEach(elem => {
-      elem.addEventListener('click', () => {
-        const text = elem.textContent.trim();
-
-        // Clipboard API — современный способ
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text)
-            .then(() => alert('Скопировано'))
-            .catch(err => console.error('Ошибка копирования:', err));
-        } else {
-          // Фоллбэк для старых браузеров
-          const textarea = document.createElement('textarea');
-          textarea.value = text;
-          document.body.appendChild(textarea);
-          textarea.select();
-          document.execCommand('copy');
-          textarea.remove();
-          alert('Скопировано');
-        }
-      });
-    });
-  </script>
-  <script src="/scripts/shop/index.js"></script>
+  <script src="scripts/Script.AlertMessage.js"></script>
+  <script src="/scripts/Script.CopyToClipboard.js"></script>
   <!-- <main>
     <h1>Welcome to the Client Page</h1>
     <p>This is a sample client-side HTML file.</p>

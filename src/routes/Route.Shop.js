@@ -7,4 +7,5 @@ module.exports = async function (fastify) {
     const page = await ShopController.getPage();
     return reply.sendFile(page);
   });
+  
 };

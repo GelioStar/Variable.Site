@@ -2,7 +2,7 @@
 
 module.exports = {
   async getPage() {
-    return 'pages/shop/shop.html';
+    return 'pages/shop/Page.Shop.html';
   },
 
 };
